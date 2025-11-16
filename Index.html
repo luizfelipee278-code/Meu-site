@@ -1,0 +1,84 @@
+DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Página de Vendas — Livro Educacional sobre Racismo</title>
+<style>
+  :root{--bg:#f4f6f8;--card:#ffffff;--accent:#111827;--muted:#6b7280}
+  body{margin:0;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;background:var(--bg);color:#111}
+  .wrap{max-width:980px;margin:36px auto;padding:20px}
+  header{display:flex;align-items:center;gap:16px}
+  .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#111,#444);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+  .hero{background:var(--card);padding:28px;border-radius:14px;box-shadow:0 6px 20px rgba(17,24,39,0.06);display:grid;grid-template-columns:1fr 360px;gap:24px}
+  h1{margin:0 0 8px;font-size:24px}
+  p.lead{margin:0 0 16px;color:var(--muted)}
+  .price{font-size:28px;font-weight:700;margin:12px 0}
+  .buy{display:inline-block;padding:12px 18px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600}
+  .features{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  .feature{background:#f8fafc;padding:10px;border-radius:8px;font-size:14px;color:#111}
+  aside.card{background:#fff;padding:18px;border-radius:12px;align-self:start}
+  footer{text-align:center;color:var(--muted);margin-top:18px;font-size:13px}
+  img.capa{width:100%;max-width:300px;margin-bottom:16px;border-radius:12px;}
+  @media(max-width:880px){.hero{grid-template-columns:1fr;}.logo{width:52px;height:52px}}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">SV</div>
+      <div>
+        <div style="font-weight:700">Sua Marca</div>
+        <div style="color:var(--muted);font-size:13px">Página de vendas pronta</div>
+      </div>
+    </header>
+
+    <main class="hero" role="main" aria-labelledby="prod-title">
+      <section>
+        <!-- Imagem da capa do livro -->
+        <img src="capa-do-livro.jpg" alt="Capa do Livro Sobre Racismo" class="capa">
+
+        <h1 id="prod-title">Livro Educacional: Entenda o Racismo e Transforme a Realidade</h1>
+        <p class="lead">Aprenda sobre racismo, consciência social e educação antirracista — guia direto, humano e transformador.</p>
+
+        <div class="features">
+          <div class="feature">✅ Acesso imediato após pagamento</div>
+          <div class="feature">✅ Conteúdo educativo e completo</div>
+          <div class="feature">✅ Garantia de 7 dias</div>
+        </div 
+
+        <h2 style="margin-top:18px;font-size:18px">O que você recebe</h2>
+        <ul style="margin:8px 0 0 18px;color:#111">
+          <li>Livro em PDF completo</li>
+          <li>Materiais complementares</li>
+          <li>Suporte via e-mail</li>
+        </ul>
+
+        <p style="margin-top:20px;color:var(--muted);font-size:14px">Depoimentos e prova social ajudam muito — cole aqui prints, comentários ou avaliações.</p>
+      </section>
+
+      <aside class="card" aria-label="Painel de compra">
+        <div style="font-size:13px;color:var(--muted)">Oferta especial</div>
+        <div class="price">R$ 29,90</div>
+        <a class="buy" href="#" id="buyBtn" onclick="handleBuy()">Comprar agora</a>
+
+        <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+          Pagamento seguro • Entrega instantânea
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      © <span id="year"></span> — Sua Marca • Crie, venda e entregue em PDF / link digital
+    </footer>
+  </div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  function handleBuy(){
+    const paymentUrl = "https://pay.kiwify.com.br/GXplfCF";
+    window.open(paymentUrl, "_blank");
+  }
+</script>
+</body>
+</html>
