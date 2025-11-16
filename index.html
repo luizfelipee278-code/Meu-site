@@ -121,3 +121,60 @@ img, .wrap, input, button {
 section, aside {
   position: relative; /* Garante que nada fique sobre outro sem querer */
 }
+/* Site maior e organizado */
+body {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.wrap {
+  max-width: 1200px;
+  padding: 40px 30px;
+  margin: 0 auto;
+}
+
+header {
+  gap: 24px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 32px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(17,24,39,0.06);
+}
+
+.features .feature {
+  padding: 14px;
+  font-size: 15px;
+}
+
+aside.card {
+  padding: 24px;
+  font-size: 15px;
+  position: relative;
+}
+
+img.capa {
+  max-width: 350px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+input, button {
+  font-size: 15px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+@media(max-width:880px){
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .logo {
+    width: 52px;
+    height: 52px;
+  }
+}
