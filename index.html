@@ -99,3 +99,25 @@ DOCTYPE html>
     Pagamento seguro • Entrega instantânea
   </div>
 </aside>
+<div class="features">
+  <div class="feature">✅ Acesso imediato após pagamento</div>
+  <div class="feature">✅ Conteúdo educativo e completo</div>
+  <div class="feature">✅ Garantia de 7 dias</div>
+</div> <!-- ← Aqui faltava fechar -->
+/* Corrige elementos sobrepostos e margem de colapso */
+* {
+  box-sizing: border-box;
+}
+
+.hero > section, .hero > aside {
+  min-width: 0; /* Evita que grid quebre o layout */
+}
+
+img, .wrap, input, button {
+  display: block;
+  max-width: 100%;
+}
+
+section, aside {
+  position: relative; /* Garante que nada fique sobre outro sem querer */
+}
