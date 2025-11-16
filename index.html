@@ -82,3 +82,20 @@ DOCTYPE html>
 </script>
 </body>
 </html>
+<aside class="card" aria-label="Painel de compra">
+  <div style="font-size:13px;color:var(--muted)">Oferta especial</div>
+  <div class="price" id="price">R$ 29,90</div>
+
+  <!-- Campo de cupom de desconto -->
+  <div style="margin:12px 0;">
+    <input type="text" id="couponCode" placeholder="Digite seu cupom" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ccc;font-size:14px;margin-bottom:8px;">
+    <button onclick="applyCoupon()" style="width:100%;padding:10px;border-radius:8px;background:#111827;color:#fff;border:none;font-weight:600;cursor:pointer;">Aplicar cupom</button>
+    <div id="couponMessage" style="margin-top:6px;font-size:12px;color:red;"></div>
+  </div>
+
+  <a class="buy" href="#" id="buyBtn" onclick="handleBuy()">Comprar agora</a>
+
+  <div style="margin-top:12px;font-size:13px;color:var(--muted)">
+    Pagamento seguro • Entrega instantânea
+  </div>
+</aside>
